@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SADAR Dental Care | Gazipur</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<meta name="description" content="SADAR Dental Care, Gazipur. Modern, personalized dental care focused on creating healthy smiles in a calm and comfortable space. Book your appointment today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F7FC;
+    --surface:#FFFFFF;
+    --ink:#0E1B2E;
+    --ink-soft:#57697E;
+    --teal:#1258C7;
+    --teal-deep:#072A5E;
+    --teal-mid:#1F6FE0;
+    --teal-light:#6FB3F2;
+    --mint:#EAF2FE;
+    --line:#E3E9F5;
+    --coral:#C9A227;
+    --gold:#D9A73C;
+    --shadow-sm:0 1px 2px rgba(10,20,40,.07);
+    --shadow-md:0 16px 40px -12px rgba(10,20,40,.18);
+    --shadow-lg:0 30px 70px -20px rgba(8,30,60,.35);
+    --r-lg:26px;
+    --r-md:18px;
+    --r-sm:12px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  svg{display:block;}
+  .icon{width:22px;height:22px;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+  .container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px;}
+  section{padding:110px 0;position:relative;}
+  h1,h2,h3,h4{font-weight:800;letter-spacing:-0.02em;line-height:1.15;}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    text-transform:uppercase;letter-spacing:.14em;
+    color:var(--teal);font-weight:700;font-size:12px;
+    background:var(--mint);
+    padding:8px 16px;border-radius:50px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral);}
+  .head{max-width:640px;margin-bottom:56px;}
+  .head.center{margin-left:auto;margin-right:auto;text-align:center;}
+  .head h2{font-size:clamp(30px,4vw,44px);margin-bottom:16px;color:var(--teal-deep);}
+  .head p{color:var(--ink-soft);font-size:16.5px;}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:15px 28px;border-radius:50px;
+    font-weight:700;font-size:15px;white-space:nowrap;
+    transition:transform .25s ease,box-shadow .25s ease,background .25s ease,color .25s ease;
+    border:1.5px solid transparent;cursor:pointer;
+  }
+  .btn .icon{width:18px;height:18px;}
+  .btn-coral{background:var(--coral);color:#fff;box-shadow:0 14px 30px -8px rgba(255,107,74,.55);}
+  .btn-coral:hover{transform:translateY(-3px);box-shadow:0 18px 34px -6px rgba(255,107,74,.6);}
+  .btn-ghost-light{border-color:rgba(255,255,255,.35);color:#fff;}
+  .btn-ghost-light:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.6);}
+  .btn-line{border-color:var(--line);color:var(--ink);background:#fff;}
+  .btn-line:hover{border-color:var(--teal);color:var(--teal);}
+  .btn-dark{background:var(--ink);color:#fff;}
+  .btn-dark:hover{background:var(--teal-deep);transform:translateY(-3px);}
+  .btn-indigo{background:linear-gradient(135deg,#2E6BF0,#1258C7);color:#fff;box-shadow:0 14px 30px -8px rgba(18,88,199,.55);}
+  .btn-indigo:hover{transform:translateY(-3px);box-shadow:0 18px 34px -6px rgba(18,88,199,.6);}
+  .btn-outline-white{border:1.5px solid rgba(255,255,255,.45);color:#fff;background:transparent;}
+  .btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:#fff;}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:translateY(0);}
+  .reveal-delay-1.in{transition-delay:.08s;}
+  .reveal-delay-2.in{transition-delay:.16s;}
+  .reveal-delay-3.in{transition-delay:.24s;}
+  .reveal-delay-4.in{transition-delay:.32s;}
+
+  /* ===== Announcement ===== */
+  .topbar{background:var(--teal-deep);color:rgba(255,255,255,.85);font-size:12.5px;padding:9px 0;position:relative;z-index:120;}
+  .topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+  .topbar .row{display:flex;gap:22px;flex-wrap:wrap;align-items:center;}
+  .topbar .row span{display:inline-flex;align-items:center;gap:6px;}
+  .topbar .icon{width:14px;height:14px;}
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:110;
+    background:rgba(248,244,236,.7);
+    backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(14,33,29,.06);
+    transition:box-shadow .3s ease,background .3s ease;
+  }
+  header.scrolled{box-shadow:0 8px 30px -12px rgba(14,33,29,.15);background:rgba(248,244,236,.92);}
+  nav.container{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .logo-badge{
+    width:44px;height:44px;border-radius:50%;
+    overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 18px -6px rgba(10,52,44,.4);
+    flex-shrink:0;
+    background:var(--surface);
+    border:2px solid var(--mint);
+  }
+  .logo-badge img{width:100%;height:100%;object-fit:cover;}
+  .brand-text h2{font-size:18px;letter-spacing:-.01em;color:var(--teal-deep);}
+  .brand-text span{display:block;font-size:10px;letter-spacing:.16em;color:var(--ink-soft);font-weight:700;}
+  .nav-links{display:flex;gap:34px;align-items:center;}
+  .nav-links a{font-weight:600;font-size:14.5px;color:var(--ink);position:relative;padding:4px 0;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--coral);transition:width .25s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex;align-items:center;gap:12px;}
+  .icon-btn{
+    width:44px;height:44px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    background:var(--mint);color:var(--teal);
+    border:1px solid transparent;
+  }
+  .icon-btn:hover{background:var(--teal);color:#fff;}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+
+  /* ===== Hero ===== */
+  .hero{
+    padding:64px 0 0;
+    min-height:92vh;display:flex;align-items:center;
+    background:radial-gradient(1300px 700px at 18% -10%,#0B2E6E 0%,#061B3D 45%,#030B1F 100%);
+    color:#fff;overflow:hidden;position:relative;
+  }
+  .hero-noise{
+    position:absolute;inset:0;z-index:1;pointer-events:none;mix-blend-mode:overlay;opacity:.06;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .hero-grid-pattern{
+    position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5;
+    background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+    background-size:46px 46px;
+    -webkit-mask-image:radial-gradient(900px 500px at 20% 20%,#000 0%,transparent 75%);
+    mask-image:radial-gradient(900px 500px at 20% 20%,#000 0%,transparent 75%);
+  }
+  .hero-spotlight{
+    position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(520px circle at var(--mx,50%) var(--my,15%),rgba(255,255,255,.09),transparent 60%);
+  }
+  .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;pointer-events:none;z-index:1;}
+  .blob-1{width:420px;height:420px;background:#2E6BF0;top:-140px;right:-100px;animation:float1 12s ease-in-out infinite;}
+  .blob-2{width:340px;height:340px;background:#0E3E90;opacity:.35;bottom:-120px;left:-80px;animation:float2 14s ease-in-out infinite;}
+  .blob-3{width:260px;height:260px;background:#5FA8FF;opacity:.18;top:40%;left:38%;animation:float1 16s ease-in-out infinite reverse;}
+  @keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,25px)}}
+  @keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-25px,-20px)}}
+
+  .hero .container{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;
+    position:relative;z-index:3;padding-bottom:70px;
+  }
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+    padding:8px 16px;border-radius:50px;font-size:13px;font-weight:600;margin-bottom:26px;
+  }
+  .hero-badge .icon{width:15px;height:15px;color:var(--gold);}
+  .hero h1{font-size:clamp(34px,4.6vw,54px);margin-bottom:22px;letter-spacing:-.03em;}
+  .hero h1 em{
+    font-style:italic;font-weight:500;font-family:'Fraunces',serif;color:#F4EBD3;
+  }
+  .hero h1 .grad{
+    background:linear-gradient(90deg,#9EC6FF,#D9A73C 70%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .headline-chip{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:0.95em;height:0.95em;border-radius:50%;vertical-align:middle;margin:0 .08em;position:relative;top:-.08em;
+    background:linear-gradient(135deg,#2E6BF0,#1258C7);
+    box-shadow:0 8px 18px -6px rgba(18,88,199,.6);
+  }
+  .headline-chip .icon{width:52%;height:52%;color:#fff;stroke-width:2;}
+  .hero p.lead{font-size:17px;color:rgba(255,255,255,.75);max-width:480px;margin-bottom:32px;}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:32px;}
+  .hero-stats{display:flex;align-items:center;gap:22px;border-top:1px solid rgba(255,255,255,.16);padding-top:24px;max-width:520px;}
+  .hero-stats .stat strong{display:flex;align-items:baseline;gap:3px;font-size:26px;font-weight:800;}
+  .hero-stats .stat strong .unit{font-size:15px;color:#9EC6FF;font-weight:700;}
+  .hero-stats .stat span{display:block;font-size:11.5px;color:rgba(255,255,255,.55);margin-top:3px;}
+  .hero-stats .div-line{width:1px;height:30px;background:rgba(255,255,255,.16);flex-shrink:0;}
+
+  /* doctor photo panel */
+  .hero-photo-col{position:relative;z-index:3;}
+  .hero-photo-panel{
+    position:relative;height:560px;border-radius:32px;overflow:hidden;
+    background:linear-gradient(165deg,#0B2A5E,#061B3D 65%);
+    display:flex;align-items:flex-end;justify-content:center;
+    box-shadow:0 40px 90px -24px rgba(0,0,0,.55);
+  }
+  .hero-photo-panel::after{
+    content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+    background:linear-gradient(180deg,rgba(7,6,30,.05) 0%,rgba(7,6,30,.05) 55%,rgba(7,6,30,.55) 100%);
+  }
+  .hero-photo-panel .doctor-img{
+    position:relative;z-index:1;height:100%;width:100%;object-fit:cover;object-position:center 20%;
+  }
+  .review-float-card{
+    position:absolute;left:24px;bottom:24px;z-index:5;max-width:220px;width:calc(100% - 40px);
+    background:#fff;color:var(--ink);border-radius:18px;padding:20px 22px;
+    box-shadow:0 26px 54px -16px rgba(10,8,40,.4);
+  }
+  .review-float-card .stars{color:#F5B400;font-size:14px;letter-spacing:2px;display:block;margin-bottom:8px;}
+  .review-float-card h4{font-size:15px;margin-bottom:6px;color:var(--ink);font-weight:700;}
+  .review-float-card p{font-size:12px;color:var(--ink-soft);line-height:1.5;}
+
+  /* hero infobar */
+  .hero-infobar{position:relative;z-index:10;margin-top:-64px;}
+  .infobar-card{
+    background:#fff;border-radius:26px;box-shadow:0 30px 64px -20px rgba(10,8,40,.4);
+    padding:34px 40px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;
+  }
+  .info-item{display:flex;align-items:center;gap:16px;}
+  .info-item .ico{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#2E6BF0,#1258C7);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .info-item h4{font-size:15.5px;color:var(--ink);margin-bottom:3px;}
+  .info-item a,.info-item span{font-size:13.5px;color:var(--ink-soft);font-weight:500;}
+  .info-divider{width:1px;height:44px;background:var(--line);flex-shrink:0;}
+  .infobar-cta{white-space:nowrap;}
+
+  /* ===== About ===== */
+  .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center;}
+  .about-photo-wrap{position:relative;}
+  .about-photo-panel{
+    position:relative;height:520px;border-radius:28px;overflow:hidden;
+    background:linear-gradient(160deg,#0B2E6E,#061B3D 70%);
+    display:flex;align-items:flex-end;justify-content:center;
+    box-shadow:var(--shadow-lg);
+  }
+  .about-photo-panel .panel-pattern{
+    position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+    background-size:34px 34px;
+    -webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);
+    mask-image:linear-gradient(180deg,#000,transparent 85%);
+  }
+  .about-photo-panel img{position:relative;z-index:2;width:100%;height:100%;object-fit:cover;object-position:center;}
+  .about-badge{
+    position:absolute;right:-18px;bottom:-22px;z-index:5;width:172px;height:150px;
+    border-radius:22px;padding:22px;text-align:center;
+    background:linear-gradient(150deg,#2E6BF0,#0E3E90);
+    box-shadow:0 26px 54px -16px rgba(14,62,144,.5);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    border:6px solid var(--mint);
+  }
+  .about-badge strong{color:#fff;font-size:26px;font-weight:800;display:block;white-space:nowrap;}
+  .about-badge span{color:rgba(255,255,255,.85);font-size:12px;line-height:1.4;margin-top:4px;display:block;}
+
+  .about-stats{display:flex;gap:40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;margin:30px 0;}
+  .about-stats .stat strong{display:block;font-size:34px;font-weight:800;color:var(--teal-deep);}
+  .about-stats .stat span{display:block;font-size:13px;color:var(--ink-soft);margin-top:4px;max-width:160px;}
+
+  .about-cta-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+  .about-founder{display:flex;align-items:center;gap:12px;}
+  .about-founder img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid #fff;box-shadow:var(--shadow-sm);}
+  .about-founder strong{display:block;font-size:14.5px;color:var(--ink);}
+  .about-founder span{font-size:12px;color:var(--ink-soft);}
+
+  /* ===== Services ===== */
+  .services{background:var(--surface);}
+  .services-categories{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;align-items:start;}
+  .service-category{
+    padding:32px 30px;border-radius:22px;border:1px solid var(--line);
+    background:var(--bg);
+    transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s,border-color .35s;
+  }
+  .service-category:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-md);
+    border-color:var(--teal-light);
+  }
+  .service-category h3{
+    display:flex;align-items:center;gap:12px;font-size:17px;color:var(--teal-deep);font-weight:700;
+    margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid var(--line);
+  }
+  .service-category h3 .ico{width:38px;height:38px;border-radius:11px;background:var(--mint);color:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .4s cubic-bezier(.22,1,.36,1),background .35s,color .35s;}
+  .service-category:hover h3 .ico{transform:rotate(-10deg) scale(1.1);background:var(--teal);color:#fff;}
+  .service-category ul{display:grid;gap:14px;}
+  .service-category li{display:flex;gap:10px;align-items:flex-start;transition:transform .25s;}
+  .service-category li:hover{transform:translateX(5px);}
+  .service-category li::before{content:"";flex-shrink:0;width:6px;height:6px;border-radius:50%;background:var(--teal-light);margin-top:8px;transition:transform .25s,background .25s;}
+  .service-category li:hover::before{transform:scale(1.7);background:var(--teal);}
+  .service-category h4{font-size:14.5px;font-weight:700;color:var(--ink);margin-bottom:2px;transition:color .25s;}
+  .service-category li:hover h4{color:var(--teal-deep);}
+  .service-category li p{font-size:12.5px;color:var(--ink-soft);}
+  .services-cta{
+    margin-top:36px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    background:var(--mint);border-radius:20px;padding:26px 32px;
+  }
+  .services-cta p{font-weight:600;color:var(--teal-deep);font-size:15px;}
+
+  /* ===== Why ===== */
+  .why{
+    background:radial-gradient(900px 500px at 90% 0%,#0B2E6E,var(--teal-deep) 60%,#030B1F);
+    color:#fff;overflow:hidden;
+  }
+  .why-grid-pattern{
+    position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.45;
+    background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+    background-size:44px 44px;
+    -webkit-mask-image:radial-gradient(900px 600px at 50% 40%,#000 0%,transparent 85%);
+    mask-image:radial-gradient(900px 600px at 50% 40%,#000 0%,transparent 85%);
+  }
+  .why-layout{position:relative;z-index:1;}
+  .why .eyebrow{background:rgba(255,255,255,.1);color:#fff;}
+  .why .eyebrow::before{background:var(--gold);}
+  .why-layout{display:grid;grid-template-columns:1.05fr .85fr 1.05fr;gap:36px;align-items:center;}
+  .why-text h2{font-size:clamp(28px,3.6vw,42px);color:#fff;margin:14px 0 18px;font-weight:800;line-height:1.15;}
+  .why-text p{color:rgba(255,255,255,.7);font-size:15.5px;margin-bottom:30px;max-width:420px;}
+  .why-photo{position:relative;height:460px;display:flex;align-items:center;justify-content:center;}
+  .why-photo-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.18),transparent 70%);z-index:1;}
+  .why-photo img{position:relative;z-index:2;height:92%;width:auto;max-width:100%;object-fit:contain;object-position:center;filter:drop-shadow(0 26px 30px rgba(0,0,0,.45));}
+  .why-features{display:flex;flex-direction:column;}
+  .why-feature{display:flex;gap:16px;align-items:flex-start;padding:18px 0;}
+  .why-feature .ico{width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,#2E6BF0,#1258C7);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .why-feature h4{font-size:16px;margin-bottom:6px;color:#fff;font-weight:700;}
+  .why-feature p{font-size:13px;color:rgba(255,255,255,.65);line-height:1.5;}
+  .feature-divider{height:1px;background:rgba(255,255,255,.14);}
+
+  /* ===== Transformations ===== */
+  .transform-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px;}
+  .transform-head .head{margin-bottom:0;text-align:left;max-width:640px;}
+  .ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .ba-card{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--line);transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s,border-color .35s;}
+  .ba-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:var(--teal-light);}
+  .ba-slider{position:relative;aspect-ratio:2.6/1;overflow:hidden;touch-action:pan-y;}
+  .ba-slider-static{aspect-ratio:2.487/1;touch-action:auto;}
+  .ba-slider-static img{width:100%;height:100%;object-fit:cover;display:block;}
+  .ba-before,.ba-after{position:absolute;inset:0;overflow:hidden;}
+  .ba-before img,.ba-after img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+  .ba-after{clip-path:inset(0 0 0 50%);}
+  .ba-label{position:absolute;top:16px;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:50px;z-index:3;}
+  .ba-label-before{left:16px;background:var(--teal-deep);color:#fff;}
+  .ba-label-after{right:16px;background:var(--teal-deep);color:#fff;}
+  .ba-divider{position:absolute;top:0;bottom:0;width:3px;background:#fff;left:50%;transform:translateX(-50%);box-shadow:0 0 0 5px rgba(255,255,255,.22);pointer-events:none;z-index:4;}
+  .ba-handle{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:46px;height:46px;border-radius:50%;background:#fff;
+    display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);
+    cursor:ew-resize;z-index:5;color:var(--teal-deep);touch-action:none;
+  }
+  .ba-caption{padding:16px 22px;font-size:13px;color:var(--ink-soft);background:var(--mint);}
+  .ba-caption strong{color:var(--teal-deep);}
+
+  /* ===== Reviews ===== */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .review-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:30px 26px;position:relative;transition:box-shadow .3s,transform .3s;}
+  .review-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px);}
+  .review-card .quote{width:34px;height:34px;color:var(--mint);margin-bottom:14px;}
+  .review-card .quote svg{width:100%;height:100%;fill:var(--mint);stroke:none;}
+  .review-card .stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:12px;display:block;}
+  .review-card p.txt{font-size:14.5px;color:var(--ink);margin-bottom:22px;}
+  .review-card .who{display:flex;align-items:center;gap:12px;}
+  .review-card .avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--teal-mid),var(--teal-deep));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;}
+  .review-card .who strong{font-size:13.5px;display:block;}
+  .review-card .who span{font-size:12px;color:var(--ink-soft);}
+
+  /* ===== News ===== */
+  .news-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px;}
+  .news-head .head{margin-bottom:0;text-align:left;max-width:640px;}
+  .news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+  .news-card{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow .3s,transform .3s;}
+  .news-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px);}
+  .news-img-wrap{width:42%;flex-shrink:0;position:relative;background:linear-gradient(150deg,var(--teal-deep),var(--teal-mid));overflow:hidden;}
+  .news-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+  .news-img-wrap.contain{display:flex;align-items:center;justify-content:center;padding:14px;}
+  .news-doctor-badge{width:230px;height:230px;border-radius:50%;background:#fff;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;box-shadow:0 16px 32px -10px rgba(0,0,0,.4);flex-shrink:0;}
+  .news-doctor-badge img{width:auto;height:82%;object-fit:contain;object-position:bottom center;}
+  .news-body{padding:28px 26px;display:flex;flex-direction:column;justify-content:center;gap:10px;}
+  .news-body h3{font-size:19px;color:var(--teal-deep);font-weight:800;line-height:1.3;}
+  .news-body p{font-size:14px;color:var(--ink-soft);line-height:1.6;}
+  .news-body .learn{color:var(--teal-mid);font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:4px;margin-top:4px;}
+  .news-body .learn svg{width:14px;height:14px;stroke:var(--teal-mid);}
+
+  /* ===== Contact ===== */
+  .contact{background:linear-gradient(180deg,var(--surface),var(--mint) 120%);}
+  .contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:stretch;}
+  .contact-card{background:var(--teal-deep);color:#fff;border-radius:28px;padding:44px;position:relative;overflow:hidden;}
+  .contact-card::before{content:"";position:absolute;width:260px;height:260px;background:var(--teal-mid);opacity:.4;border-radius:50%;filter:blur(60px);top:-80px;right:-80px;}
+  .contact-card h3{font-size:24px;margin-bottom:8px;position:relative;}
+  .contact-card > p{color:rgba(255,255,255,.7);font-size:14px;margin-bottom:30px;position:relative;}
+  .contact-item{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px;position:relative;}
+  .contact-item .ico{width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.1);color:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .contact-item h4{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.55);margin-bottom:4px;font-weight:700;}
+  .contact-item a,.contact-item p{font-size:15px;font-weight:600;color:#fff;}
+  .socials{display:flex;gap:10px;margin-top:28px;position:relative;}
+  .socials a{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .25s,transform .25s;}
+  .socials a:hover{background:var(--coral);transform:translateY(-3px);}
+  .socials .icon{width:18px;height:18px;}
+
+  .map-side{border-radius:28px;overflow:hidden;box-shadow:var(--shadow-md);position:relative;min-height:340px;}
+  .map-side iframe{width:100%;height:100%;min-height:340px;border:0;position:absolute;inset:0;}
+  .map-badge{
+    position:absolute;bottom:22px;left:22px;z-index:5;
+    background:#fff;padding:14px 18px;border-radius:16px;box-shadow:var(--shadow-md);
+    display:flex;align-items:center;gap:12px;
+  }
+  .map-badge .ico{width:38px;height:38px;border-radius:10px;background:var(--mint);color:var(--teal);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .map-badge strong{font-size:13.5px;display:block;}
+  .map-badge span{font-size:11.5px;color:var(--ink-soft);}
+
+  /* ===== CTA strip ===== */
+  .cta-strip{
+    background:linear-gradient(120deg,var(--coral),#8C6B14);
+    color:#fff;text-align:center;padding:80px 0;position:relative;overflow:hidden;
+  }
+  .cta-strip .blob{background:#fff;opacity:.08;}
+  .cta-strip .cb1{width:380px;height:380px;top:-160px;left:-100px;}
+  .cta-strip .cb2{width:280px;height:280px;bottom:-140px;right:-60px;}
+  .cta-strip .inner{position:relative;z-index:2;}
+  .cta-strip h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:14px;}
+  .cta-strip p{margin-bottom:30px;opacity:.92;font-size:16px;}
+  .cta-strip .btn-dark{background:#fff;color:var(--coral);}
+  .cta-strip .btn-dark:hover{background:var(--teal-deep);color:#fff;}
+
+  /* ===== Footer ===== */
+  footer{background:var(--ink);color:rgba(255,255,255,.68);padding:64px 0 26px;border-radius:36px 36px 0 0;margin-top:-1px;}
+  .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px;margin-bottom:46px;}
+  .footer-brand .brand-text h2{color:#fff;}
+  .footer-brand .brand-text span{color:rgba(255,255,255,.5);}
+  .footer-brand p{margin-top:18px;font-size:13.5px;line-height:1.8;max-width:320px;}
+  footer h4{color:#fff;font-size:14px;margin-bottom:18px;letter-spacing:.04em;text-transform:uppercase;}
+  footer ul li{margin-bottom:12px;font-size:13.5px;display:flex;gap:8px;align-items:flex-start;}
+  footer ul li .icon{width:15px;height:15px;flex-shrink:0;margin-top:2px;color:var(--teal-mid);}
+  footer ul li a:hover{color:#fff;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:rgba(255,255,255,.45);}
+
+  /* floating buttons */
+  .float-stack{position:fixed;right:24px;bottom:24px;display:flex;flex-direction:column;gap:14px;z-index:200;}
+  .fab{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -8px rgba(0,0,0,.35);transition:transform .25s ease;}
+  .fab:hover{transform:scale(1.08);}
+  .fab-wa{background:#25D366;color:#fff;position:relative;}
+  .fab-wa .pulse{position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:pulse 2.2s ease-out infinite;}
+  @keyframes pulse{0%{transform:scale(1);opacity:.7;}100%{transform:scale(1.9);opacity:0;}}
+  .fab-top{background:#fff;color:var(--teal-deep);border:1px solid var(--line);width:44px;height:44px;align-self:flex-end;opacity:0;pointer-events:none;transform:translateY(10px);}
+  .fab-top.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+
+  @media(max-width:980px){
+    .hero{min-height:auto;padding-bottom:40px;}
+    .hero .container{grid-template-columns:1fr;}
+    .hero-photo-col{margin-top:36px;}
+    .hero-photo-panel{height:400px;}
+    .hero-infobar{margin-top:-40px;}
+    .infobar-card{padding:28px;}
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo-panel{height:360px;}
+    .about-photo-wrap{margin-bottom:36px;}
+    .about-badge{width:150px;height:130px;padding:16px;}
+    .about-badge strong{font-size:24px;}
+    .services-categories{grid-template-columns:1fr;}
+    .why-layout{grid-template-columns:1fr;text-align:center;}
+    .why-text p{margin-left:auto;margin-right:auto;}
+    .why-photo{order:-1;height:340px;margin-bottom:10px;}
+    .why-feature{justify-content:center;text-align:left;}
+    .ba-grid{grid-template-columns:1fr;}
+    .transform-head{flex-direction:column;align-items:flex-start;}
+    .reviews-grid{grid-template-columns:1fr;}
+    .news-grid{grid-template-columns:1fr;}
+    .news-head{flex-direction:column;align-items:flex-start;}
+    .news-card{flex-direction:column;}
+    .news-img-wrap{width:100%;height:200px;}
+    .news-doctor-badge{width:170px;height:170px;}
+    .contact-grid{grid-template-columns:1fr;}
+    .map-side{min-height:300px;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:760px){
+    section{padding:76px 0;}
+    .topbar .row:nth-child(2){display:none;}
+    .nav-links{
+      position:fixed;top:76px;left:16px;right:16px;
+      background:#fff;flex-direction:column;padding:22px;gap:18px;
+      border-radius:20px;box-shadow:var(--shadow-lg);display:none;
+    }
+    .nav-links.open{display:flex;}
+    .menu-toggle{display:flex;}
+    .nav-cta .btn-coral span.label{display:none;}
+    .hero-stats{flex-wrap:wrap;gap:14px;}
+    .hero-stats .div-line{display:none;}
+    .hero-stats .stat{flex:0 0 45%;}
+    .hero-photo-panel{height:340px;}
+    .about-stats{gap:24px;flex-wrap:wrap;}
+    .about-cta-row{flex-direction:column;align-items:flex-start;}
+    .infobar-card{flex-direction:column;align-items:stretch;padding:26px 22px;}
+    .info-item{justify-content:flex-start;text-align:left;}
+    .info-divider{width:100%;height:1px;}
+    .infobar-cta{justify-content:center;}
+    .service-category{padding:26px 22px;}
+    .why-photo{height:280px;}
+    .footer-grid{grid-template-columns:1fr;gap:34px;}
+  }
+  @media(max-width:430px){
+    nav.container{padding:12px 14px;gap:6px;}
+    .brand{gap:8px;min-width:0;}
+    .logo-badge{width:36px;height:36px;flex-shrink:0;}
+    .brand-text{min-width:0;flex:1;}
+    nav.container .brand{flex:1;min-width:0;}
+    .brand-text h2{font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .brand-text span{display:none;}
+    .nav-cta{gap:6px;}
+    .icon-btn{width:38px;height:38px;flex-shrink:0;}
+    .icon-btn svg{width:16px;height:16px;}
+    .menu-toggle{flex-shrink:0;}
+    .hero-badge{font-size:11.5px;padding:7px 12px;}
+    .hero-actions .btn{padding:13px 20px;font-size:14px;}
+    .review-float-card{padding:16px 18px;left:16px;bottom:16px;}
+    .about-badge{width:128px;height:112px;padding:14px;right:-10px;bottom:-14px;}
+    .about-badge strong{font-size:20px;}
+    .about-badge span{font-size:10.5px;}
+    .infobar-card{padding:22px 18px;}
+    .float-stack{right:16px;bottom:16px;}
+    .fab{width:48px;height:48px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ICON SPRITES (hidden) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21c-4-4-7-7.5-7-11a7 7 0 0 1 14 0c0 3.5-3 7-7 11z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 14.9 8.6 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9.1 8.6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.4 8.4 0 0 1 8.4-8.5h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><line x1="12" y1="9" x2="12" y2="15"/><line x1="9" y1="12" x2="15" y2="12"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></symbol>
+    <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 3c-2.6 0-4.3 1.6-4.3 3.7 0 1-.3 2-.7 3-.6 1.7-1.3 3.5-1.3 5.6 0 2.1.8 4.2 2.1 4.2 1.1 0 1.1-2.1 1.6-3.7.4-1.3 1.2-2.3 2.6-2.3s2.2 1 2.6 2.3c.5 1.6.5 3.7 1.6 3.7 1.3 0 2.1-2.1 2.1-4.2 0-2.1-.7-3.9-1.3-5.6-.4-1-.7-2-.7-3C16.3 4.6 14.6 3 12 3z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M15 3h-2a5 5 0 0 0-5 5v3H6v4h2v6h4v-6h3l1-4h-4V8a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="6"/><circle cx="12" cy="12" r="4.2"/><line x1="17.6" y1="6.4" x2="17.61" y2="6.4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="3"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></symbol>
+    <symbol id="i-resize" viewBox="0 0 24 24"><polyline points="7 8 3 12 7 16"/><polyline points="17 8 21 12 17 16"/><line x1="3" y1="12" x2="21" y2="12"/></symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="container">
+    <div class="row">
+      <span><svg class="icon" width="14" height="14"><use href="#i-pin"/></svg> Khan Market (2nd Floor), Joydebpur, Gazipur‑1700</span>
+      <span><svg class="icon" width="14" height="14"><use href="#i-phone"/></svg> <a href="tel:+8801886629045">01886‑629045</a></span>
+    </div>
+    <div class="row">
+      <span><svg class="icon" width="14" height="14"><use href="#i-star"/></svg> 5.0 rated on Google (43 reviews)</span>
+    </div>
+  </div>
+</div>
+
+<header id="siteHeader">
+  <nav class="container">
+    <div class="brand">
+      <div class="logo-badge"><img src="assets/logo.png" alt="SADAR Dental Care logo"></div>
+      <div class="brand-text">
+        <h2>SADAR Dental Care</h2>
+        <span>YOUR TEETH, OUR PRIORITY</span>
+      </div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="icon-btn" href="tel:+8801886629045" aria-label="Call"><svg class="icon" width="19" height="19"><use href="#i-phone"/></svg></a>
+      <a class="btn btn-coral" href="https://wa.me/8801686929045" target="_blank" rel="noopener"><svg class="icon" width="18" height="18"><use href="#i-msg"/></svg><span class="label">Book Now</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><svg class="icon" width="26" height="26"><use href="#i-arrow" style="display:none"/></svg>
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-noise"></div>
+  <div class="hero-grid-pattern"></div>
+  <div class="hero-spotlight" id="spotlight"></div>
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="container">
+    <div class="hero-text reveal in">
+      <span class="hero-badge"><svg class="icon" width="15" height="15"><use href="#i-sparkle"/></svg> Trusted Dental Clinic in Gazipur</span>
+      <h1>Healthy smiles start<br>with <span class="grad">SADAR Dental Care</span></h1>
+      <p class="lead">Modern, personalized dental care focused on creating healthy smiles in a calm and comfortable space, right in the heart of Gazipur City.</p>
+      <div class="hero-stats">
+        <div class="stat"><strong>5.0<span class="unit">★</span></strong><span>Google Rating</span></div>
+        <div class="div-line"></div>
+        <div class="stat"><strong>50<span class="unit">+</span></strong><span>Happy Reviews</span></div>
+        <div class="div-line"></div>
+        <div class="stat"><strong>2000<span class="unit">+</span></strong><span>Happy Customers</span></div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-indigo" href="https://wa.me/8801686929045" target="_blank" rel="noopener"><svg class="icon" width="18" height="18"><use href="#i-phone"/></svg>Book Now</a>
+        <a class="btn btn-outline-white" href="https://wa.me/8801686929045" target="_blank" rel="noopener"><svg class="icon" width="18" height="18"><use href="#i-plus"/></svg>Enquire Now</a>
+      </div>
+    </div>
+    <div class="hero-photo-col reveal in">
+      <div class="hero-photo-panel">
+        <img class="doctor-img" src="assets/hero-doctor.jpg" alt="Dentist examining a patient's teeth at SADAR Dental Care">
+        <div class="review-float-card">
+          <span class="stars">★★★★★</span>
+          <h4>Best Service &amp; 5 Star</h4>
+          <p>Rated 5.0 on Google by 50+ happy patients across Gazipur</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="hero-infobar">
+  <div class="container">
+    <div class="infobar-card reveal">
+      <div class="info-item">
+        <div class="ico"><svg class="icon" width="20" height="20"><use href="#i-phone"/></svg></div>
+        <div><h4>Need Dental Services?</h4><a href="tel:+8801886629045">01886‑629045</a></div>
+      </div>
+      <div class="info-divider"></div>
+      <div class="info-item">
+        <div class="ico"><svg class="icon" width="20" height="20"><use href="#i-clock"/></svg></div>
+        <div><h4>Opening Hours</h4><span>9:30 AM – 10:00 PM</span></div>
+      </div>
+      <div class="info-divider"></div>
+      <a class="btn btn-indigo infobar-cta" href="https://wa.me/8801686929045" target="_blank" rel="noopener">Make An Appointment <svg class="icon" width="16" height="16"><use href="#i-plus"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="about-photo-wrap">
+        <div class="about-photo-panel">
+          <div class="panel-pattern"></div>
+          <img src="assets/about-room.jpg" alt="Modern dental treatment room at SADAR Dental Care">
+        </div>
+        <div class="about-badge">
+          <strong>2000+</strong>
+          <span>happy patients treated in Gazipur</span>
+        </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <span class="eyebrow"><svg class="icon" width="14" height="14" style="margin-right:2px"><use href="#i-shield"/></svg> About Us</span>
+      <h2 class="head" style="margin-bottom:16px;font-size:clamp(28px,3.6vw,40px);color:var(--teal-deep);">Committed to Your Smile's Health and Comfort</h2>
+      <p style="color:var(--ink-soft);font-size:16px;max-width:520px;">SADAR Dental Care is a modern dental clinic in Gazipur City dedicated to creating healthy, confident smiles. Our calm, comfortable clinic and attentive team make every visit, from a routine check‑up to a surgical procedure, stress‑free.</p>
+
+      <div class="about-stats">
+        <div class="stat"><strong>5.0★</strong><span>Google Rating from 50+ Reviews</span></div>
+        <div class="stat"><strong>100%</strong><span>Personalized Patient Care</span></div>
+      </div>
+
+      <div class="about-cta-row">
+        <a class="btn btn-indigo" href="#services">More About <svg class="icon" width="16" height="16"><use href="#i-plus"/></svg></a>
+        <div class="about-founder">
+          <img src="assets/doctor.webp" alt="Dr. Shamol Das">
+          <div><strong>Dr. Shamol Das</strong><span>Oral &amp; Dental Surgeon</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">What We Offer</span>
+      <h2>Our Dental Services</h2>
+      <p>From routine check‑ups to specialized surgery, our team is here to keep your smile healthy.</p>
+    </div>
+    <div class="services-categories">
+      <div class="service-category reveal">
+        <h3><span class="ico"><svg class="icon" width="20" height="20"><use href="#i-activity"/></svg></span> General &amp; Preventive Care</h3>
+        <ul>
+          <li><div><h4>Dental Check‑Up &amp; Consultation</h4><p>Routine exams to catch problems early.</p></div></li>
+          <li><div><h4>Scaling &amp; Polishing</h4><p>Professional cleaning to remove plaque and stains.</p></div></li>
+          <li><div><h4>Dental X‑Ray</h4><p>Accurate digital imaging for precise diagnosis.</p></div></li>
+          <li><div><h4>Oral Hygiene Education</h4><p>Simple guidance for lasting dental health.</p></div></li>
+          <li><div><h4>Children's Dental Care (Pedodontics)</h4><p>Gentle, friendly care for young smiles.</p></div></li>
+          <li><div><h4>Dental Certificate for Medical Clearance</h4><p>Official dental exams and certificates.</p></div></li>
+        </ul>
+      </div>
+      <div class="service-category reveal reveal-delay-1">
+        <h3><span class="ico"><svg class="icon" width="20" height="20"><use href="#i-shield"/></svg></span> Restorative &amp; Surgical</h3>
+        <ul>
+          <li><div><h4>Tooth Filling / Restoration</h4><p>Repair cavities and chipped teeth safely.</p></div></li>
+          <li><div><h4>Root Canal Treatment (RCT)</h4><p>Pain‑relief treatment that saves the tooth.</p></div></li>
+          <li><div><h4>Tooth Extraction (Simple &amp; Surgical)</h4><p>Safe removal when a tooth can't be saved.</p></div></li>
+          <li><div><h4>Wisdom Tooth Removal</h4><p>Expert care for impacted or painful wisdom teeth.</p></div></li>
+          <li><div><h4>Dental Crown &amp; Bridge</h4><p>Durable, natural‑looking tooth restoration.</p></div></li>
+          <li><div><h4>Denture Services (Full/Partial)</h4><p>Comfortable, custom‑fit replacement teeth.</p></div></li>
+        </ul>
+      </div>
+      <div class="service-category reveal reveal-delay-2">
+        <h3><span class="ico"><svg class="icon" width="20" height="20"><use href="#i-star"/></svg></span> Cosmetic &amp; Orthodontic</h3>
+        <ul>
+          <li><div><h4>Teeth Whitening</h4><p>Brighten your smile, safely and gently.</p></div></li>
+          <li><div><h4>Cosmetic Teeth Cleaning</h4><p>Deep polish for a fresher, brighter look.</p></div></li>
+          <li><div><h4>Cosmetic Tooth Reshaping</h4><p>Subtle contouring for a more even smile.</p></div></li>
+          <li><div><h4>Smile Makeover Consultation</h4><p>A personalized plan for your dream smile.</p></div></li>
+          <li><div><h4>Midline Diastema Closing</h4><p>Closes gaps between front teeth.</p></div></li>
+          <li><div><h4>Dental Braces</h4><p>Expert alignment for a confident smile.</p></div></li>
+          <li><div><h4>Pre‑Braces Oral Care Consultation</h4><p>Getting your mouth brace‑ready.</p></div></li>
+        </ul>
+      </div>
+      <div class="service-category reveal reveal-delay-3">
+        <h3><span class="ico"><svg class="icon" width="20" height="20"><use href="#i-zap"/></svg></span> Emergency &amp; Additional Care</h3>
+        <ul>
+          <li><div><h4>Toothache &amp; Emergency Dental Care</h4><p>Fast relief when you need it most.</p></div></li>
+          <li><div><h4>Pain Management</h4><p>Gentle, effective relief from dental pain.</p></div></li>
+          <li><div><h4>Gum Disease Treatment</h4><p>Care for healthier, stronger gums.</p></div></li>
+          <li><div><h4>Oral Ulcer Treatment</h4><p>Quick relief for mouth sores and ulcers.</p></div></li>
+          <li><div><h4>Tooth Sensitivity Management</h4><p>Lasting relief from sharp tooth pain.</p></div></li>
+          <li><div><h4>Post &amp; Core Treatment</h4><p>Extra support for a tooth after root canal.</p></div></li>
+          <li><div><h4>Dental Splinting for Loose Teeth</h4><p>Stabilizes loose teeth for lasting comfort.</p></div></li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a class="btn btn-indigo" href="services.html" target="_blank" rel="noopener">View All Services <svg class="icon" width="16" height="16"><use href="#i-plus"/></svg></a>
+    </div>
+    <div class="services-cta reveal">
+      <p>Not sure what you need? Message us on WhatsApp for honest, no‑pressure advice.</p>
+      <a class="btn btn-dark" href="https://wa.me/8801686929045" target="_blank" rel="noopener">Chat With Us <svg class="icon" width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-grid-pattern"></div>
+  <div class="container why-layout">
+    <div class="why-text reveal">
+      <span class="eyebrow"><svg class="icon" width="14" height="14" style="margin-right:2px"><use href="#i-shield"/></svg> Why Choose Us</span>
+      <h2>Care and Results You Can Trust</h2>
+      <p>Accurate diagnosis and honest treatment plans help protect your oral health and prevent bigger problems down the road.</p>
+      <a class="btn btn-indigo" href="#contact">Contact Us <svg class="icon" width="16" height="16"><use href="#i-plus"/></svg></a>
+    </div>
+    <div class="why-photo reveal reveal-delay-1">
+      <div class="why-photo-glow"></div>
+      <img src="assets/doctor-why.webp" alt="Dr. Shamol Das, Oral &amp; Dental Surgeon at SADAR Dental Care">
+    </div>
+    <div class="why-features reveal reveal-delay-2">
+      <div class="why-feature">
+        <div class="ico"><svg class="icon" width="22" height="22"><use href="#i-zap"/></svg></div>
+        <div><h4>Emergency Dental Care</h4><p>Toothache or urgent issue? Message us on WhatsApp for fast help.</p></div>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="why-feature">
+        <div class="ico"><svg class="icon" width="22" height="22"><use href="#i-star"/></svg></div>
+        <div><h4>5.0★ Patient Reviews</h4><p>Rated 5.0 on Google by 50+ happy patients across Gazipur.</p></div>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="why-feature">
+        <div class="ico"><svg class="icon" width="22" height="22"><use href="#i-user"/></svg></div>
+        <div><h4>Experienced Care Team</h4><p>Led by Dr. Shamol Das with a calm, patient‑first approach.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="transformations">
+  <div class="container">
+    <div class="transform-head reveal">
+      <div class="head" style="margin-bottom:0;">
+        <span class="eyebrow"><svg class="icon" width="14" height="14" style="margin-right:2px"><use href="#i-shield"/></svg> See the Transformation</span>
+        <h2>See the Difference Good Care Makes</h2>
+        <p>Drag the slider to compare. Real results start with the right treatment plan.</p>
+      </div>
+      <a class="btn btn-indigo" href="https://wa.me/8801686929045" target="_blank" rel="noopener">Contact Now <svg class="icon" width="16" height="16"><use href="#i-plus"/></svg></a>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-card reveal">
+        <div class="ba-slider">
+          <div class="ba-before">
+            <img src="assets/ba-before.jpg" alt="Before scaling and polishing treatment" loading="lazy">
+          </div>
+          <div class="ba-after">
+            <img src="assets/ba-after.jpg" alt="After scaling and polishing treatment" loading="lazy">
+          </div>
+          <span class="ba-label ba-label-before">Before</span>
+          <span class="ba-label ba-label-after">After</span>
+          <div class="ba-divider"></div>
+          <div class="ba-handle"><svg class="icon" width="20" height="20"><use href="#i-resize"/></svg></div>
+        </div>
+        <div class="ba-caption"><strong>Scaling &amp; Polishing:</strong> brighter, healthier‑looking smile.</div>
+      </div>
+      <div class="ba-card reveal reveal-delay-1">
+        <div class="ba-slider ba-slider-static">
+          <img src="assets/ba-braces.jpg" alt="Before and after orthodontic braces treatment at SADAR Dental Care" loading="lazy">
+        </div>
+        <div class="ba-caption"><strong>Orthodontic Treatment:</strong> straighter, more confident smile.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What Our Patients Say</h2>
+      <p>5.0★ average from 50+ Google reviews.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="quote"><svg viewBox="0 0 24 24"><path d="M9.3 8.5c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1L9.3 8.5zm9 0c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1l-2.7-1.5z"/></svg></div>
+        <span class="stars">★★★★★</span>
+        <p class="txt">"A genuinely comfortable dental experience, with a modern clinic, caring staff, and honest advice."</p>
+        <div class="who"><div class="avatar">S</div><div><strong>Sarwar Shuvo</strong><span>Google Review</span></div></div>
+      </div>
+      <div class="review-card reveal reveal-delay-1">
+        <div class="quote"><svg viewBox="0 0 24 24"><path d="M9.3 8.5c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1L9.3 8.5zm9 0c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1l-2.7-1.5z"/></svg></div>
+        <span class="stars">★★★★★</span>
+        <p class="txt">"Root canal treatment at Sadar Dental Care was smooth and painless. The clinician was skilled, gentle and very caring. Highly recommended, best in Joydebpur."</p>
+        <div class="who"><div class="avatar">R</div><div><strong>Rashadul Islam</strong><span>Google Review</span></div></div>
+      </div>
+      <div class="review-card reveal reveal-delay-2">
+        <div class="quote"><svg viewBox="0 0 24 24"><path d="M9.3 8.5c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1L9.3 8.5zm9 0c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1l-2.7-1.5z"/></svg></div>
+        <span class="stars">★★★★★</span>
+        <p class="txt">"The best dental experience I've had. The office is spotless and modern. I was seen exactly at my appointment time, and the dentist was transparent about costs upfront. Would definitely recommend."</p>
+        <div class="who"><div class="avatar">K</div><div><strong>Khudista Khatun</strong><span>Google Review</span></div></div>
+      </div>
+      <div class="review-card reveal reveal-delay-3">
+        <div class="quote"><svg viewBox="0 0 24 24"><path d="M9.3 8.5c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1L9.3 8.5zm9 0c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1l-2.7-1.5z"/></svg></div>
+        <span class="stars">★★★★★</span>
+        <p class="txt">"Very good and responsible doctor. Humble, friendly, and dedicated to his patients. Uses modern technology and machines. Highly recommended for any dental or oral problem."</p>
+        <div class="who"><div class="avatar">R</div><div><strong>Rafin Khan</strong><span>Google Review</span></div></div>
+      </div>
+      <div class="review-card reveal reveal-delay-4">
+        <div class="quote"><svg viewBox="0 0 24 24"><path d="M9.3 8.5c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1L9.3 8.5zm9 0c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1l-2.7-1.5z"/></svg></div>
+        <span class="stars">★★★★★</span>
+        <p class="txt">"Had a surgical extraction done. It was painless and smooth. Best experience I've had in a dental chamber. Great skill and care from the doctor."</p>
+        <div class="who"><div class="avatar">H</div><div><strong>Hasnat Rbm</strong><span>Google Review</span></div></div>
+      </div>
+      <div class="review-card reveal reveal-delay-4">
+        <div class="quote"><svg viewBox="0 0 24 24"><path d="M9.3 8.5c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1L9.3 8.5zm9 0c-2.4.9-3.8 2.9-3.8 5.4 0 2.4 1.7 4.1 3.8 4.1 2 0 3.6-1.6 3.6-3.6 0-1.9-1.4-3.4-3.2-3.4-.2 0-.5 0-.7.1.3-1.4 1.5-2.6 3-3.1l-2.7-1.5z"/></svg></div>
+        <span class="stars">★★★★★</span>
+        <p class="txt">"Received light cure restoration and scaling treatment. Highly satisfied. The dentist explained each step, the clinic was clean, and my teeth feel much healthier."</p>
+        <div class="who"><div class="avatar">S</div><div><strong>Shapnadas Bksp</strong><span>Google Review</span></div></div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:32px;color:var(--ink-soft);font-weight:600;font-size:14.5px;">+ many more 5‑star reviews from happy patients on Google</p>
+  </div>
+</section>
+
+<section id="news">
+  <div class="container">
+    <div class="news-head reveal">
+      <div class="head" style="margin-bottom:0;">
+        <span class="eyebrow"><svg class="icon" width="14" height="14" style="margin-right:2px"><use href="#i-tooth"/></svg> Latest News</span>
+        <h2>Latest Dental News, Insights &amp; Oral Health Advice</h2>
+        <p>Simple, practical guidance from our team to help you keep your smile healthy between visits.</p>
+      </div>
+      <a class="btn btn-indigo" href="#contact">View All Posts <svg class="icon" width="16" height="16"><use href="#i-plus"/></svg></a>
+    </div>
+    <div class="news-grid">
+      <div class="news-card reveal">
+        <div class="news-img-wrap">
+          <img src="assets/clinic-hero.jpg" alt="Dental clinic treatment room at SADAR Dental Care" loading="lazy">
+        </div>
+        <div class="news-body">
+          <h3>Essential Tips for a Healthy Smile</h3>
+          <p>Maintaining a healthy smile comes down to consistent daily habits: brushing twice a day, flossing, and cutting back on sugary snacks all make a real difference over time.</p>
+          <a class="learn" href="blog-smile-tips.html" target="_blank" rel="noopener">Learn More <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="news-card reveal reveal-delay-1">
+        <div class="news-img-wrap contain">
+          <div class="news-doctor-badge">
+            <img src="assets/doctor.webp" alt="Dr. Shamol Das explaining the benefits of regular dental checkups" loading="lazy">
+          </div>
+        </div>
+        <div class="news-body">
+          <h3>Benefits of Regular Dental Checkups</h3>
+          <p>Routine checkups let us catch small issues, like early decay or gum irritation, before they turn into bigger, more costly problems. We recommend a visit every six months.</p>
+          <a class="learn" href="blog-checkups.html" target="_blank" rel="noopener">Learn More <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="head center reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Visit or Contact Us</h2>
+      <p>Have questions or want to book a visit? Reach out. We're happy to help.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3>Let's talk</h3>
+        <p>We usually reply within minutes on WhatsApp.</p>
+        <div class="contact-item">
+          <div class="ico"><svg class="icon" width="19" height="19"><use href="#i-pin"/></svg></div>
+          <div><h4>Address</h4><p>Khan Market (2nd Floor), opposite the Emergency Dept. of Shaheed Tajuddin Ahmad Medical College Hospital, Joydebpur, Gazipur City, Gazipur‑1700, Bangladesh</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><svg class="icon" width="19" height="19"><use href="#i-phone"/></svg></div>
+          <div><h4>Phone</h4><a href="tel:+8801686929045">01686‑929045</a>, <a href="tel:+8801886629045">01886‑629045</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><svg class="icon" width="19" height="19"><use href="#i-msg"/></svg></div>
+          <div><h4>WhatsApp</h4><a href="https://wa.me/8801686929045" target="_blank" rel="noopener">+880 1686‑929045</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="ico"><svg class="icon" width="19" height="19"><use href="#i-mail"/></svg></div>
+          <div><h4>Email</h4><a href="mailto:sadardentalsd@gmail.com">sadardentalsd@gmail.com</a></div>
+        </div>
+        <div class="socials">
+          <a href="https://www.facebook.com/sadardentalcare/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" width="18" height="18"><use href="#i-fb"/></svg></a>
+          <a href="https://www.instagram.com/Sadar_Dental_Care" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" width="18" height="18"><use href="#i-ig"/></svg></a>
+          <a href="https://wa.me/8801686929045" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icon" width="18" height="18"><use href="#i-msg"/></svg></a>
+        </div>
+      </div>
+      <div class="map-side reveal reveal-delay-1">
+        <iframe src="https://www.google.com/maps?cid=10106803682466914283&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="SADAR Dental Care location map"></iframe>
+        <div class="map-badge">
+          <div class="ico"><svg class="icon" width="18" height="18"><use href="#i-clock"/></svg></div>
+          <div><strong>Open Today</strong><span>9:30 AM – 10:00 PM</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="blob cb1"></div>
+  <div class="blob cb2"></div>
+  <div class="container inner reveal">
+    <h2>Ready for a healthier smile?</h2>
+    <p>Book your appointment today. It only takes a message.</p>
+    <a class="btn btn-dark" href="https://wa.me/8801686929045" target="_blank" rel="noopener"><svg class="icon" width="18" height="18"><use href="#i-msg"/></svg>Message Us on WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand">
+          <div class="logo-badge"><img src="assets/logo.png" alt="SADAR Dental Care logo"></div>
+          <div class="brand-text"><h2>SADAR Dental Care</h2><span>YOUR TEETH, OUR PRIORITY</span></div>
+        </div>
+        <p>Modern, personalized dental care focused on creating healthy smiles in a calm and comfortable space. Located in Joydebpur, Gazipur City.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><svg class="icon" width="15" height="15"><use href="#i-arrow"/></svg><a href="#about">About Us</a></li>
+          <li><svg class="icon" width="15" height="15"><use href="#i-arrow"/></svg><a href="#services">Services</a></li>
+          <li><svg class="icon" width="15" height="15"><use href="#i-arrow"/></svg><a href="#reviews">Reviews</a></li>
+          <li><svg class="icon" width="15" height="15"><use href="#i-arrow"/></svg><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><svg class="icon" width="15" height="15"><use href="#i-pin"/></svg>Khan Market (2nd Floor), Joydebpur, Gazipur‑1700</li>
+          <li><svg class="icon" width="15" height="15"><use href="#i-phone"/></svg><a href="tel:+8801686929045">01686‑929045</a>, <a href="tel:+8801886629045">01886‑629045</a></li>
+          <li><svg class="icon" width="15" height="15"><use href="#i-msg"/></svg><a href="https://wa.me/8801686929045" target="_blank" rel="noopener">+880 1686‑929045</a></li>
+          <li><svg class="icon" width="15" height="15"><use href="#i-mail"/></svg><a href="mailto:sadardentalsd@gmail.com">sadardentalsd@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> SADAR Dental Care. All rights reserved.</span>
+      <span>Gazipur City, Gazipur, Bangladesh</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-stack">
+  <button class="fab fab-top" id="toTop" aria-label="Back to top"><svg class="icon" width="18" height="18"><use href="#i-up"/></svg></button>
+  <a class="fab fab-wa" href="https://wa.me/8801686929045" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="pulse"></span>
+    <svg class="icon" width="26" height="26" stroke="#fff"><use href="#i-msg"/></svg>
+  </a>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const header = document.getElementById('siteHeader');
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 30);
+    toTop.classList.toggle('show', y > 500);
+  });
+  toTop.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+  menuToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const heroEl = document.getElementById('hero');
+  const spotlight = document.getElementById('spotlight');
+  if(heroEl && spotlight && window.matchMedia('(pointer:fine)').matches){
+    heroEl.addEventListener('mousemove', (e) => {
+      const r = heroEl.getBoundingClientRect();
+      spotlight.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      spotlight.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.ba-slider').forEach((slider) => {
+    const after = slider.querySelector('.ba-after');
+    const handle = slider.querySelector('.ba-handle');
+    const divider = slider.querySelector('.ba-divider');
+    if (!after || !handle || !divider) return;
+    let dragging = false;
+    function setPos(clientX){
+      const r = slider.getBoundingClientRect();
+      let pct = ((clientX - r.left) / r.width) * 100;
+      pct = Math.max(0, Math.min(100, pct));
+      after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+      handle.style.left = pct + '%';
+      divider.style.left = pct + '%';
+    }
+    handle.addEventListener('pointerdown', (e) => {
+      dragging = true;
+      handle.setPointerCapture(e.pointerId);
+    });
+    handle.addEventListener('pointerup', () => dragging = false);
+    handle.addEventListener('pointermove', (e) => { if (dragging) setPos(e.clientX); });
+    slider.addEventListener('click', (e) => { if (e.target !== handle && !handle.contains(e.target)) setPos(e.clientX); });
+  });
+</script>
+
+</body>
+</html>
